@@ -1,7 +1,6 @@
 import express from "express" 
 import "dotenv/config"
 import dbConnect from "./src/config/dbconnect.js"
-import seedAdmin from "./src/controllers/seed.js"
 import cors from "cors"
 
 dbConnect()

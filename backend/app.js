@@ -1,12 +1,10 @@
 import express from "express" 
 import "dotenv/config"
 import dbConnect from "./src/config/dbconnect.js"
-import route from "./src/routes/route.js"
 import seedAdmin from "./src/controllers/seed.js"
 import cors from "cors"
 
 dbConnect()
-// seedAdmin()  
 const app = express() 
 
 //middlewares

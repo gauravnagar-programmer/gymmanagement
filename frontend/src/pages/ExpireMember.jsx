@@ -19,7 +19,7 @@ const ExpireMembers = () => {
   const getData = async () => {
     try {
       const res = await axios.get(
-        "https://gymmanagementbackend-yc5w.onrender.com/admin/members/all",
+        import.meta.env.VITE_API_URL + "/admin/members/all",
         header
       );
       const filteredData =  res.data.filter(item => item.status == "expired")
@@ -32,7 +32,7 @@ const ExpireMembers = () => {
 
   const handleDelete = async (id) => {
     const Delete = await axios.delete(
-      `https://gymmanagementbackend-yc5w.onrender.com/admin/members/delete/${id}`,
+      import.meta.env.VITE_API_URL + `/admin/members/delete/${id}`,
       header
     );
     const {message} = Delete.data

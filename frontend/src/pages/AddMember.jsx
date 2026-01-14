@@ -37,7 +37,7 @@ const AddMember = () => {
       };
 
       const res = await axios.post(
-        "https://gymmanagementbackend-yc5w.onrender.com/admin/member/add",
+        import.meta.env.VITE_API_URL + "/admin/member/add",
         inputValue,
         header
       );

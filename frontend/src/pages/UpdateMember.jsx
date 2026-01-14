@@ -26,7 +26,7 @@ const UpdateMember = () => {
   }
 
   const getMemberData = async () =>{
-    const res = await axios.get(`https://gymmanagementbackend-yc5w.onrender.com/admin/members/update/details/${id}`,header)
+    const res = await axios.get(import.meta.env.VITE_API_URL + `/admin/members/update/details/${id}`,header)
     console.log(res)
     
     setInputValue({
@@ -46,7 +46,7 @@ const UpdateMember = () => {
       if(!name || !phone || !membership || !startingdate) {
         return WarningMessage("All fields are required")
       }
-      const res = await axios.put(`https://gymmanagementbackend-yc5w.onrender.com/admin/member/update/${id}`,inputValue,header)
+      const res = await axios.put(import.meta.env.VITE_API_URL + `/admin/member/update/${id}`,inputValue,header)
       const {message,success} = res.data
       if(success){
         SuccessMessage(message)

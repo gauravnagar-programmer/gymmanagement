@@ -21,7 +21,7 @@ const LoginForm = () => {
        return  WarningMessage("All fields are required")
       }
     try {
-      const res = await axios.post('https://gymmanagementbackend-yc5w.onrender.com/admin/login',inputFields)
+      const res = await axios.post(import.meta.env.VITE_API_URL + '/admin/login',inputFields)
       console.log(res)
       if(res.status === 200){
         SuccessMessage("Login Successful"),

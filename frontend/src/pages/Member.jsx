@@ -17,7 +17,7 @@ const MemberList = () => {
   const getData = async () => {
     try {
       const res = await axios.get(
-        "https://gymmanagementbackend-yc5w.onrender.com/admin/members/all",
+        import.meta.env.VITE_API_URL + "/admin/members/all",
         header
       );
       setData(res.data);
@@ -28,7 +28,7 @@ const MemberList = () => {
 
   const handleDelete = async (id) => {
     const Delete = await axios.delete(
-      `https://gymmanagementbackend-yc5w.onrender.com/admin/members/delete/${id}`,
+      import.meta.env.VITE_API_URL + `/admin/members/delete/${id}`,
       header
     );
     console.log(Delete);

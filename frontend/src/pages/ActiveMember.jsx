@@ -17,7 +17,7 @@ const ActiveMembers = () => {
   const getData = async () => {
     try {
       const res = await axios.get(
-        "http://192.168.214.156:4000/admin/members/all",
+        "https://gymmanagementbackend-yc5w.onrender.com/admin/members/all",
         header
       );
       const filteredData = res.data.filter((item) => item.status !== "expired" );
@@ -30,7 +30,7 @@ const ActiveMembers = () => {
 
   const handleDelete = async (id) => {
     const Delete = await axios.delete(
-      `http://192.168.214.156:4000/admin/members/delete/${id}`,
+      `https://gymmanagementbackend-yc5w.onrender.com/admin/members/delete/${id}`,
       header
     );
 

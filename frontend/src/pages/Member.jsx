@@ -17,7 +17,7 @@ const MemberList = () => {
   const getData = async () => {
     try {
       const res = await axios.get(
-        "http://192.168.63.156:4000/admin/members/all",
+        "https://gymmanagementbackend-yc5w.onrender.com/admin/members/all",
         header
       );
       setData(res.data);
@@ -28,7 +28,7 @@ const MemberList = () => {
 
   const handleDelete = async (id) => {
     const Delete = await axios.delete(
-      `http://192.168.63.156:4000/admin/members/delete/${id}`,
+      `https://gymmanagementbackend-yc5w.onrender.com/admin/members/delete/${id}`,
       header
     );
     console.log(Delete);

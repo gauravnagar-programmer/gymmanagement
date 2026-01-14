@@ -10,10 +10,10 @@ const Sidebar = () => {
     setTimeout(() => {
       
       navigate('/')
-    }, 1000);
+    }, 1000); 
   }
 
-  return (
+  return ( 
     <div
       className={` space-y-10 md:space-y-24 flex flex-col fixed left-0 top-0 md:w-50 w-30 h-screen bg-gray-500 dark:bg-gray-200`}
     >

@@ -21,7 +21,7 @@ const LoginForm = () => {
        return  WarningMessage("All fields are required")
       }
     try {
-      const res = await axios.post('http://192.168.214.156:4000/admin/login',inputFields)
+      const res = await axios.post('https://gymmanagementbackend-yc5w.onrender.com/admin/login',inputFields)
       console.log(res)
       if(res.status === 200){
         SuccessMessage("Login Successful"),

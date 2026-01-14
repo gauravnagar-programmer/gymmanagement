@@ -37,7 +37,7 @@ const AddMember = () => {
       };
 
       const res = await axios.post(
-        "http://192.168.214.156:4000/admin/member/add",
+        "https://gymmanagementbackend-yc5w.onrender.com/admin/member/add",
         inputValue,
         header
       );

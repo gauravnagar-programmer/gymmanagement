@@ -83,7 +83,7 @@ const LoginForm = () => {
           onChange={(e) =>
             setInputFields({ ...inputFields, secretKey: e.target.value })
           }
-          type="text"
+          type="password"
           className="input focus-visible:outline-gray-500 w-full "
           placeholder="Enter your Secret key"
         />
